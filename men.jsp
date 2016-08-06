@@ -1,68 +1,120 @@
-<!DOCTYPE html>
-<html>
-<head>
+
+
+<%@include file="header.jsp"%>
+
 <meta charset="UTF-8">
 <title>Goggles for men</title>
+<style>
+body
+{
+  background-color:#1A5276;
+  
+}
+h3
+{
+color : white;
+}
+</style>
 </head>
 <body>
-<body bgcolor="floralwhite">
-<center><h1 style="color:indianred">GLASSES FOR MEN</h1> </center><hr>
+<center><h1 style="color:indianred">GLASSES FOR MEN</h1> </center><hr><br>
+<table>
 <div class="container-fluid">
 <div class="row">
 <div class="col-md-4">
-<img src="Images/gm1.jpg" width="300" height="300" >
-<img src="Images/gm2.jpg" width="300" height="300" >
-<img src="Images/gm3.jpg" width="300" height="300" >
-<img src="Images/gm4.jpg" width="300" height="300" >
-</div><br><br><br><hr>
+<tr>
+<td>
+<figure>
+<img src="resources/images/background50.jpg" width="300" height="300" >
+<figcaption> <h3>Model- OO1</h3> </figcaption>
+</figure>
+</td>
+<td>
+<figure>
+<img src="resources/images/background51.jpg" width="300" height="300" >
+<figcaption> <h3>Model- OO2</h3> </figcaption>
+</figure>
+</td>
+
+<td>
+<figure>
+<img src="resources/images/background52.jpg" width="300" height="300" >
+<figcaption> <h3>Model- OO3</h3> </figcaption>
+</figure>
+</td>
+<td>
+<figure>
+
+<img src="resources/images/background53.jpg" width="300" height="300" >
+<figcaption> <h3>Model- OO4</h3> </figcaption>
+
+</figure>
+</td>
+</tr>
+</div>
 <div class="col-md-4">
-<img src="Images/gm5.jpg" width="300" height="300" >
-<img src="Images/gm6.jpg" width="300" height="300" >
-<img src="Images/gm7.jpg" width="300" height="300" >
-<img src="Images/gm8.jpg" width="300" height="300" >
-</div><br><br><br><hr>
+<tr>
+<td>
+<figure>
+<img src="resources/images/background54.jpg" width="300" height="300" >
+<figcaption> <h3>Model- OO5</h3> </figcaption>
+</figure>
+
+</td>
+<td>
+<figure>
+<img src="resources/images/background55.jpg" width="300" height="300" >
+<figcaption> <h3>Model- OO6</h3> </figcaption>
+</figure>
+
+</td>
+<td>
+<figure>
+<img src="resources/images/background56.jpg" width="300" height="300" >
+<figcaption> <h3>Model- OO7</h3> </figcaption>
+</figure>
+
+</td>
+<td>
+<figure>
+<img src="resources/images/background57.jpg" width="300" height="300" >
+<figcaption> <h3>Model- OO8</h3> </figcaption>
+</figure>
+</td>
+</tr>
+</div>
+
 <div class="col-md-4">
-<img src="Images/gm9.jpg" width="300" height="300" >
-<img src="Images/gm10.jpg" width=300" height="300" >
-<img src="Images/gm11.jpg" width="300" height="300" >
-<img src="Images/gm12.jpg" width="300" height="300" >
-</div><br><br><br><hr>
-<div class="row">
-<div class="col-md-4">
-<img src="Images/gm13.jpg" width="300" height="300" >
-<img src="Images/gm14.jpg" width="300" height="300" >
-<img src="Images/gm15.jpg" width="300" height="300" >
-<img src="Images/gm16.jpg" width="300" height="300" >
-</div><br><br><br><hr>
-<div class="col-md-4">
-<img src="Images/gm17.jpg" width="300" height="300" >
-<img src="Images/gm18.jpg" width="300" height="300" >
-<img src="Images/gm19.jpg" width="300" height="300" >
-<img src="Images/gm20.jpg" width="300" height="300" >
-</div><br><br><br><hr>
-<div class="col-md-4">
-<img src="Images/gm21.jpg" width="300" height="300" >
-<img src="Images/goggs2.jpg" width="300" height="300" >
-<img src="Images/goggs2.jpg" width="300" height="300" >
-<img src="Images/gog.jpg" width="300" height="300" >
-</div><br><br><br><hr>
-<div class="row">
-<div class="col-md-4">
-<img src="Images/gm1.jpg" width="300" height="300" >
-<img src="Images/gm2.jpg" width="300" height="300" >
-<img src="Images/gm3.jpg" width="300" height="300" >
-<img src="Images/gm4.jpg" width="300" height="300" >
-<div class="col-md-4"><br><br><br><hr>
-<img src="Images/gm5.jpg" width="300" height="300" >
-<img src="Images/gm6.jpg" width="300" height="300" >
-<img src="Images/gm7.jpg" width="300" height="300" >
-<img src="Images/gm8.jpg" width="300" height="300" >
-</div><br><br><br><hr>
-<div class="col-md-4">
-<img src="Images/gm9.jpg" width="300" height="300" >
-<img src="Images/gm10.jpg" width="300" height="300" >
-<img src="Images/gm11.jpg" width="300" height="300" >
-<img src="Images/gm12.jpg" width="300" height="300" >
-</div><br>
-</body>
-</html>
+<tr>
+<td>
+<figure>
+<img src="resources/images/background58.jpg" width="300" height="300" >
+<figcaption> <h3>Model- OO9</h3> </figcaption>
+</figure>
+
+</td>
+<td>
+<figure>
+<img src="resources/images/background59.jpg" width="300" height="300" >
+<figcaption> <h3>Model- O10</h3> </figcaption>
+
+</figure>
+</td>
+<td>
+<figure>
+<img src="resources/images/background60.jpg" width="300" height="300" >
+<figcaption> <h3>Model- O11</h3> </figcaption>
+</figure>
+
+</td>
+<td>
+<figure>
+<img src="resources/images/background61.jpg" width="300" height="300" >
+<figcaption> <h3>Model- O12</h3> </figcaption>
+
+</figure>
+</td>
+</div>
+</tr>
+</table>
+<%@include file="footer.jsp"%>
