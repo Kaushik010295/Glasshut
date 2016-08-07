@@ -1,18 +1,19 @@
-package com.kaushik.glasshut.dao;
+package com.kaushik.dao;
 
 import java.util.List;
 
-import com.kaushik.glasshut.config.Category;
+import com.kaushik.model.Category;
 
-interface CategoryDAO {
+public interface CategoryDAO {
+
 	
-	
+
 	public List<Category> list();
-	
-	public void get(String id);
-	
-	public void saveOrUpdate(Category category);
-	
-	public void delete(String id);
 
+	public Category get(int cid);
+
+	public void saveOrUpdate(Category category);
+
+	public void delete(int cid);
+	
 }

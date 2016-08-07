@@ -1,8 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
+<%@include file="header.jsp"%>
+
 <meta charset="UTF-8">
 <title>Goggles for women</title>
+<style>
+body
+{
+  background-color:#1A5276;
+  
+}
+</style>
 </head>
 <body>
 <body bgcolor="pink">
@@ -10,59 +16,25 @@
 <div class="container">
 <div class="row">
 <div class="col-md-4">
-<img src="Images/gw1.jpg" width="300" height="300" >
-<img src="Images/gw2.jpg" width="300" height="300" >
-<img src="Images/gw3.jpg" width="300" height="300" >
-<img src="Images/gw4.jpg" width="300" height="300" >
+<img src="resources/images/gw1.jpg" width="300" height="300" >
+<img src="resources/images/gw2.jpg" width="300" height="300" >
+<img src="resources/images/gw3.jpg" width="300" height="300" >
+<img src="resources/images/gw4.jpg" width="300" height="300" >
 </div>
+<br>
 <div class="col-md-4">
-<img src="Images/gw5.jpg" width="300" height="300" >
-<img src="Images/gw6.jpg" width="300" height="300" >
-<img src="Images/gw7.jpg" width="300" height="300" >
-<img src="Images/gw8.jpg" width="300" height="300" >
+<img src="resources/images/gw5.jpg" width="300" height="300" >
+<img src="resources/images/gw6.jpg" width="300" height="300" >
+<img src="resources/images/gw7.jpg" width="300" height="300" >
+<img src="resources/images/gw8.jpg" width="300" height="300" >
 </div>
+<br>
 <div class="col-md-4">
-<img src="Images/gw1.jpg" width="300" height="300" >
-<img src="Images/gw10.jpg" width=300" height="300" >
-<img src="Images/gw11.jpg" width="300" height="300" >
-<img src="Images/gw15.jpg" width="300" height="300" >
+<img src="resources/images/gw1.jpg" width="300" height="300" >
+<img src="resources/images/gw10.jpg" width=300" height="300" >
+<img src="resources/images/gw11.jpg" width="300" height="300" >
+<img src="resources/images/gw15.jpg" width="300" height="300" >
 </div>
-<div class="row">
-<div class="col-md-4">
-<img src="Images/gw13.jpg" width="300" height="300" >
-<img src="Images/gw14.jpg" width="300" height="300" >
-<img src="Images/gw15.jpg" width="300" height="300" >
-<img src="Images/gw16.jpg" width="300" height="300" >
-</div>
-<div class="col-md-4">
-<img src="Images/gw17.jpg" width="300" height="300" >
-<img src="Images/gw18.jpg" width="300" height="300" >
-<img src="Images/gw19.jpg" width="300" height="300" >
-<img src="Images/gw20.jpg" width="300" height="300" >
-</div>
-<div class="col-md-4">
-<img src="Images/gw15.jpg" width="300" height="300" >
-<img src="Images/gw1.jpg" width="300" height="300" >
-<img src="Images/gw2.jpg" width="300" height="300" >
-<img src="Images/gw3.jpg" width="300" height="300" >
-</div>
-<div class="row">
-<div class="col-md-4">
-<img src="Images/gw1.jpg" width="300" height="300" >
-<img src="Images/gw2.jpg" width="300" height="300" >
-<img src="Images/gw3.jpg" width="300" height="300" >
-<img src="Images/gw4.jpg" width="300" height="300" >
-<div class="col-md-4">
-<img src="Images/gw5.jpg" width="300" height="300" >
-<img src="Images/gw6.jpg" width="300" height="300" >
-<img src="Images/gw7.jpg" width="300" height="300" >
-<img src="Images/gw8.jpg" width="300" height="300" >
-</div>
-<div class="col-md-4">
-<img src="Images/gw9.jpg" width="300" height="300" >
-<img src="Images/gw10.jpg" width="300" height="300" >
-<img src="Images/gw11.jpg" width="300" height="300" >
-<img src="Images/gw12.jpg" width="300" height="300" >
-</div>
-</body>
-</html>
+
+<%@include file="footer.jsp"%>
+

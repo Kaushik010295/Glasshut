@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Glasshut - Admin</title>
+<title>Glasshut-Admin</title>
 <SCRIPT type="text/javascript">
 	window.history.forward();
 	function noBack() { window.history.forward(); }

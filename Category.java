@@ -1,6 +1,12 @@
-package com.kaushik.glasshut.config;
+package com.kaushik.model;
 
-import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.springframework.stereotype.Component;
 
 @Entity
 @Table
@@ -9,27 +15,27 @@ import javax.persistence.Column;
 public class Category {
 	
 	@Id
-	private String id;
-	private String name;
-	private String description;
-	public String getId() {
-		return id;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int cid;
+	private String cname;
+	private String cdescription;
+	public int getCid() {
+		return cid;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setCid(int cid) {
+		this.cid = cid;
 	}
-	public String getName() {
-		return name;
+	public String getCname() {
+		return cname;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setCname(String cname) {
+		this.cname = cname;
 	}
-	public String getDescription() {
-		return description;
+	public String getCdescription() {
+		return cdescription;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+	public void setCdescription(String cdescription) {
+		this.cdescription = cdescription;
 	}
-	
 
 }
