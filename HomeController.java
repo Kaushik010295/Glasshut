@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.kaushik.dao.UserDAO;
 import com.kaushik.model.User;
+import com.kaushik.service.UserService;
 
 @Controller
 public class HomeController {
 	@Autowired
-	UserDAO userDAO;
+	UserService userService;
 	User user;
 	
 	
@@ -40,7 +40,11 @@ public class HomeController {
 			@RequestParam(value = "phonenumber") String phonenumber
 
 			)
+	
 	{
+		
+
+
 		user.setUfirstname(firstname);
 		user.setUlastname(lastname);
 		user.setUsername(username);
@@ -49,6 +53,7 @@ public class HomeController {
 		user.setUsername(username);	
 		user.setUpassword(password);
 		user.setUconfirmpassword(confirmpassword);
+		userService.saveOrUpdate(user);
 
 		ModelAndView mv=new ModelAndView("login");
 	System.out.println("Register controller called");
@@ -59,19 +64,19 @@ public class HomeController {
 	
 	
 	
-	 @RequestMapping("/isValidCredentials")
+	 @RequestMapping("/isValid")
 		public ModelAndView isValidUser(@RequestParam(value = "user") String name,
 				@RequestParam(value = "pass") String password) {
 			System.out.println("in controller");
 
 			String message;
 			ModelAndView mv ;
-			if (userDAO.isValidCredentials(name,true,password)) 
+			if (userService.isValidCredentials(name,true,password)) 
 			{
 				message = "Valid credentials for Admin";
 				 mv = new ModelAndView("adminlogin");
 			} 
-			else if(userDAO.isValidCredentials(name, false, password))
+			else if(userService.isValidCredentials(name, false, password))
 			{
 				System.out.println("Page for user");
 				message = "Valid credentials for User";

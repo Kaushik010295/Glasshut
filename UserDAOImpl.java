@@ -6,15 +6,15 @@ import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.kaushik.model.Supplier;
 import com.kaushik.model.User;
 
 
-@Repository
+@Repository("userDAO")
 public class UserDAOImpl implements UserDAO{
 	
 	@Autowired
@@ -37,7 +37,7 @@ public class UserDAOImpl implements UserDAO{
 
 	@Transactional
 	public User get(int uid) {
-		String hql = "from User where id=" + "'"+ uid +"'";
+		String hql = "from User where uid=" + "'"+ uid +"'";
 		Query query =  sessionFactory.getCurrentSession().createQuery(hql);
 		@SuppressWarnings("unchecked")
 		List<User> listUser = (List<User>) query.list();
@@ -50,7 +50,10 @@ public class UserDAOImpl implements UserDAO{
 
 	@Transactional
 	public void saveOrUpdate(User user) {
+		Transaction t=sessionFactory.getCurrentSession().beginTransaction();
+
 		sessionFactory.getCurrentSession().saveOrUpdate(user);
+		t.commit();
 
 	}
 
@@ -76,9 +79,15 @@ public class UserDAOImpl implements UserDAO{
 	@Transactional
      public boolean isValidCredentials(String user,Boolean isAdmin, String pass) {
 		
-		String hql = "from user where id= '" + user + "' and password = '" + pass + "'";
+		Transaction t=sessionFactory.getCurrentSession().beginTransaction();
+		String hql = "from User where uid= '" + user + "' and upassword = '" + pass + "'";
+		//String hql = "from User where uid= '" + user + "' and " + " upassword ='" + pass+"'";
 		Query q = sessionFactory.getCurrentSession().createQuery(hql);
 		List list = q.list();
+		System.out.println("userDAOIMPL");
+		t.commit();
+		
+		
 		
 		if(list == null || list.isEmpty())
 		{
