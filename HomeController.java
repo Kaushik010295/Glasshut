@@ -64,7 +64,7 @@ public class HomeController {
 	
 	
 	
-	 @RequestMapping("/isValid")
+	/*@RequestMapping("/isValid")
 		public ModelAndView isValidUser(@RequestParam(value = "user") String name,
 				@RequestParam(value = "pass") String password) {
 			System.out.println("in controller");
@@ -92,6 +92,6 @@ public class HomeController {
 			mv.addObject("name", name);
 			return mv;
 		}
-		
+		*/
 
 }
