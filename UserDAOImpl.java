@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.kaushik.model.User;
+import com.kaushik.model.UserRole;
 
 
 @Repository("userDAO")
@@ -49,12 +50,17 @@ public class UserDAOImpl implements UserDAO{
 	}
 
 	@Transactional
-	public void saveOrUpdate(User user) {
-		Transaction t=sessionFactory.getCurrentSession().beginTransaction();
-
-		sessionFactory.getCurrentSession().saveOrUpdate(user);
-		t.commit();
-
+	public void saveOrUpdate1(User user) {
+		Session session=sessionFactory.getCurrentSession();
+		Transaction tx=session.beginTransaction();
+		user.setEnabled(true);
+		session.save(user);
+		 UserRole userRole=new UserRole();
+		  userRole.setId(user.getUid());
+		  userRole.setAuthority("ROLE_USER");
+     	  session.save(userRole);
+		System.out.println("Done saving user");
+		tx.commit();
 	}
 
 	@Transactional
@@ -87,9 +93,9 @@ public class UserDAOImpl implements UserDAO{
 		System.out.println("userDAOIMPL");
 		t.commit();
 		
+		return true;
 		
-		
-		if(list == null || list.isEmpty())
+		/*if(list == null || list.isEmpty())
 		{
 			return false;
 		}
@@ -97,7 +103,7 @@ public class UserDAOImpl implements UserDAO{
 		else
 		{
 			return true;
-		}
+		}*/
 		
 		
 		

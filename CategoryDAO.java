@@ -15,5 +15,7 @@ public interface CategoryDAO {
 	public void saveOrUpdate(Category category);
 
 	public void delete(int cid);
+	public Category getByName(String catname) ;
+
 	
 }

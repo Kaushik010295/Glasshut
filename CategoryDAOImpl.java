@@ -5,10 +5,15 @@ import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.kaushik.model.Category;
+import com.kaushik.model.Supplier;
+
+@Repository("categoryDAO")
 
 public class CategoryDAOImpl implements CategoryDAO {
 	
@@ -50,9 +55,10 @@ public class CategoryDAOImpl implements CategoryDAO {
     
     @Transactional
 	public void saveOrUpdate(Category category) {
-    	
-		sessionFactory.getCurrentSession().saveOrUpdate(category);
+		Transaction t=sessionFactory.getCurrentSession().beginTransaction();
 
+		sessionFactory.getCurrentSession().saveOrUpdate(category);
+        t.commit();
 		
 	}
 
@@ -62,6 +68,20 @@ public class CategoryDAOImpl implements CategoryDAO {
 		category.setCid(cid);
 		sessionFactory.getCurrentSession().delete(category);
 		
+	}
+
+	public Category getByName(String catname) {
+
+		String hql = "from Category where cname=" + "'"+ catname +"'";
+
+	    Query query = (Query) sessionFactory.openSession().createQuery(hql);
+	    List<Category> listCategory = (List<Category>)  query.list();
+	    
+	    if  (listCategory != null && !listCategory.isEmpty()){
+	        return listCategory.get(0);
+	        
+	    }
+		return null;
 	}
 
 }

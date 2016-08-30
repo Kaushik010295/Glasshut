@@ -10,7 +10,7 @@ public interface UserDAO {
 
 	public User get(int uid);
 
-	public void saveOrUpdate(User user);
+	public void saveOrUpdate1(User user);
 
 	public void delete(int uid);
 	

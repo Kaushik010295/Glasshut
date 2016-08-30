@@ -5,10 +5,16 @@ import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.kaushik.model.Supplier;
+
+
+
+@Repository("supplierDAO")
 
 public class SupplierDAOImpl implements SupplierDAO {
 	
@@ -48,7 +54,10 @@ public class SupplierDAOImpl implements SupplierDAO {
 
 	@Transactional
      public void saveOrUpdate(Supplier supplier) {
+		Transaction t=sessionFactory.getCurrentSession().beginTransaction();
+
 		sessionFactory.getCurrentSession().saveOrUpdate(supplier);
+		t.commit();
 
 		
 	}
@@ -59,6 +68,20 @@ public class SupplierDAOImpl implements SupplierDAO {
 		supplier.setSid(sid);
 		sessionFactory.getCurrentSession().delete(supplier);
 		
+	}
+
+	public Supplier getByName(String supname) {
+		String hql = "from Supplier where sname=" + "'"+ supname +"'";
+
+	    Query query = (Query) sessionFactory.openSession().createQuery(hql);
+	    List<Supplier> listSupplier = (List<Supplier>)  query.list();
+	    
+	    if  (listSupplier != null && !listSupplier.isEmpty()){
+	        return listSupplier.get(0);
+	        
+	    }
+	    
+		return null;
 	}
 
 }

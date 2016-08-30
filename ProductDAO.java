@@ -11,9 +11,10 @@ public interface ProductDAO {
 
 	public Product get(int pid);
 
-	public void saveOrUpdate(Product product);
+	public void saveOrUpdate1(Product product);
 
 	public void delete(int pid);
+	public void updateProduct(Product product);
 	
 
 }
