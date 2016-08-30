@@ -7,8 +7,9 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class BasicController {
 	
+	
 	@RequestMapping("/")
-	public ModelAndView Firstcontroller()
+	public ModelAndView WelcomeController()
 	{
 		
 		ModelAndView mv=new ModelAndView("index");
@@ -17,40 +18,20 @@ public class BasicController {
 		
 		return mv;
 	}
-	
-	@RequestMapping("/login")
-	public ModelAndView Secondcontroller()
-	{
 		
-		ModelAndView mv=new ModelAndView("login");
-	System.out.println("login controller called");
-		
-		
-		return mv;
-	}
-	@RequestMapping("/carousel")
-	public ModelAndView Thirdcontroller()
-	{
-		
-		ModelAndView mv=new ModelAndView("carousel");
-	System.out.println("carousel controller called");
-		
-		
-		return mv;
-	}
-	
 	@RequestMapping("/men")
-	public ModelAndView Fourthcontroller()
+	public ModelAndView MenController()
 	{
 		
 		ModelAndView mv=new ModelAndView("men");
+
 	System.out.println("men controller called");
 		
 		
 		return mv;
 	}
 	@RequestMapping("/women")
-	public ModelAndView Fifthcontroller()
+	public ModelAndView WomenController()
 	{
 		
 		ModelAndView mv=new ModelAndView("women");
@@ -61,7 +42,7 @@ public class BasicController {
 	}
 	
 	@RequestMapping("/Child")
-	public ModelAndView Sixthcontroller()
+	public ModelAndView ChildController()
 	{
 		
 		ModelAndView mv=new ModelAndView("Child");
@@ -71,7 +52,7 @@ public class BasicController {
 		return mv;
 	}
 	@RequestMapping("/acc")
-	public ModelAndView Seventhcontroller()
+	public ModelAndView AccesoriesController()
 	{
 		
 		ModelAndView mv=new ModelAndView("acc");
@@ -85,7 +66,7 @@ public class BasicController {
 	
 	
 	@RequestMapping("/product")
-	public ModelAndView Productcontroller()
+	public ModelAndView ProductController()
 	{
 		
 		ModelAndView mv=new ModelAndView("product");
@@ -95,5 +76,20 @@ public class BasicController {
 		return mv;
 	}
 	
+	@RequestMapping("/angular1")
+	public ModelAndView ViewProductsController()
+	{
+		
+		ModelAndView mv=new ModelAndView("userdisplayproduct");
+	System.out.println("Angular controller called");
+		
+		
+		return mv;
+	}
+	
+	
+	
+	
+
 
 }
